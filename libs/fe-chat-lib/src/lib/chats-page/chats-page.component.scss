@@ -1,0 +1,24 @@
+@import 'media-query';
+
+.chats-page {
+  &__container ::ng-deep {
+    .p-splitter {
+      border: none;
+      border-radius: 0;
+    }
+
+    .p-splitter-horizontal {
+      height: calc(100vh - 80px);
+
+      .p-splitter-panel-nested:first-child {
+        max-width: 80px;
+        min-width: 80px;
+
+        @include tablet {
+          max-width: 400px;
+          min-width: 200px;
+        }
+      }
+    }
+  }
+}

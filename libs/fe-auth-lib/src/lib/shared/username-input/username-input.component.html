@@ -1,0 +1,12 @@
+<div class="username-input p-float-label" [class.error]="username.touched && hasInvalidUserName()()">
+  <input type="text" pInputText class="username-input__input" name="username" [formControl]="username" />
+  <label for="float-input">{{ 'USERNAME' | translate }}</label>
+
+  <div class="username-input__input-status">
+    <p-progressSpinner strokeWidth="2" styleClass="sm-loader" *rxIf="usernameLoading$"></p-progressSpinner>
+    <ng-container *ngIf="username.valid && !(usernameLoading$ | push)">
+      <i class="pi pi-times color--error" *ngIf="hasInvalidUserName()()"></i>
+      <i class="pi pi-check color--green-600" *ngIf="!hasInvalidUserName()()"></i>
+    </ng-container>
+  </div>
+</div>

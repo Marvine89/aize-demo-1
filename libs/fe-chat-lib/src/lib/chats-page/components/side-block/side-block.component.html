@@ -1,0 +1,20 @@
+<section class="chat-side-block block">
+  <button
+    class="chat-side-block__user-info"
+    *ngFor="let onlineUser of onlineUsers()"
+    [class.active]="onlineUser.userId === selectedUser()"
+    (click)="userClicked(onlineUser)"
+  >
+    <p-avatar [image]="onlineUser.img!" styleClass="mr-2" size="large" shape="circle"></p-avatar>
+    <p class="chat-side-block__username">{{ onlineUser.username }}</p>
+    <i
+      pBadge
+      class="pi pi-comment chat-side-block__badge"
+      *ngIf="onlineUser.getUnreadChatCount(unreadChats())"
+      [value]="onlineUser.getUnreadChatCount(unreadChats()).toString()"
+    ></i>
+    <p class="chat-side-block__typing-text" *ngIf="onlineUser.isTyping(typingUserId())">
+      {{ 'TYPING' | translate }}...
+    </p>
+  </button>
+</section>

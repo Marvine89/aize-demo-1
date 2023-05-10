@@ -1,0 +1,14 @@
+<section
+  #ChatWindow
+  *ngFor="let chat of chats; trackBy: trackChatBy; let i = index"
+  class="text-message-block"
+  [class.my-chat]="chat.isMine(myUserId)"
+>
+  <div class="text-message-block__bubble" [class.right-bubble]="chat.isMine(myUserId)" [id]="'msg-' + i">
+    <span class="text-message-block__text">{{ chat.message }}</span>
+    <div class="text-message-block__state-block">
+      <span class="margin-right--xs">{{ chat.formatedDateTime }}</span>
+      <i *ngIf="chat.isMine(myUserId)" [ngClass]="chat.read ? 'pi pi-check-circle' : 'pi pi-check'"></i>
+    </div>
+  </div>
+</section>

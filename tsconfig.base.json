@@ -1,0 +1,32 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@be-auth-lib": ["libs/be-auth-lib/src/index.ts"],
+      "@be-chat-lib": ["libs/be-chat-lib/src/index.ts"],
+      "@be-environment-lib": ["libs/be-environment-lib/src/index.ts"],
+      "@be-store-lib": ["libs/be-store-lib/src/index.ts"],
+      "@be-user-lib": ["libs/be-user-lib/src/index.ts"],
+      "@fe-auth-lib": ["libs/fe-auth-lib/src/index.ts"],
+      "@fe-chat-lib": ["libs/fe-chat-lib/src/index.ts"],
+      "@fe-environment": ["libs/fe-environment/src/index.ts"],
+      "@fe-translation-lib": ["libs/fe-translation-lib/src/index.ts"],
+      "@share-lib": ["libs/share-lib/src/index.ts"],
+      "@share-libs/*": ["libs/share-lib/src/lib/*"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

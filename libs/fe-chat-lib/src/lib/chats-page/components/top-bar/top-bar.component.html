@@ -1,0 +1,17 @@
+<section class="chats-topbar">
+  <div class="chats-topbar__user-details">
+    <p-avatar icon="pi pi-user" styleClass="mr-2" size="large"></p-avatar>
+    <i
+      *rxIf="isFetchingDetails$; else username"
+      class="pi pi-spin pi-spinner margin-left--xs"
+      style="font-size: 2rem"
+    ></i>
+    <ng-template #username>
+      <p class="chats-topbar__title padding-horizontal--xs">{{ username$ | push }}</p>
+    </ng-template>
+  </div>
+  <div class="flex__center">
+    <fe-translation-dropdown class="chats-topbar__translation-dropdown"></fe-translation-dropdown>
+    <p-button icon="pi pi-power-off" styleClass="p-button-rounded p-button-text" (click)="logout()"></p-button>
+  </div>
+</section>

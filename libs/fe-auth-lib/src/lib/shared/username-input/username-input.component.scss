@@ -1,0 +1,16 @@
+.username-input {
+  &__input {
+    padding-right: calc(var(--space-lg) + 4px);
+  }
+
+  &__input-status {
+    top: 50%;
+    right: 5px;
+    z-index: 1;
+    width: 30px;
+    position: absolute;
+    text-align: center;
+    transform: translate(0%, -46%);
+    background-color: var(--surface-0);
+  }
+}

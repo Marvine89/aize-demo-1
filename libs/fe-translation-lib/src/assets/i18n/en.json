@@ -1,0 +1,16 @@
+{
+  "TITLE": "The Dating Chatbot",
+  "WELCOME_TITLE": "Welcome to the dating bot",
+  "USERNAME": "Username",
+  "SUBMIT": "Submit",
+  "SEND": "Send",
+  "API_ERROR": "An error has occured.",
+  "INVALID_USERNAME": "Invalid username.",
+  "INVALID_USERNAME_PASSWORD": "Invalid username or password.",
+  "LOGIN": "Login",
+  "REGISTER": "Register",
+  "PASSWORD": "Password",
+  "CONFIRM_PASSWORD": "Confirm password",
+  "CLICK_USER_START_CHAT": "Click on the user to start chatting.",
+  "TYPING": "Typing"
+}

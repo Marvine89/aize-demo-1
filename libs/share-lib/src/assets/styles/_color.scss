@@ -1,0 +1,11 @@
+.color {
+  &--green-300 {
+    color: var(--green-300);
+  }
+  &--green-600 {
+    color: var(--green-600);
+  }
+  &--error {
+    color: var(--color-error);
+  }
+}

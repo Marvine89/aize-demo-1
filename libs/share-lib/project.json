@@ -1,0 +1,27 @@
+{
+  "name": "share-lib",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/share-lib/src",
+  "prefix": "demo-project",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/share-lib"],
+      "options": {
+        "jestConfig": "libs/share-lib/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/share-lib/**/*.ts",
+          "libs/share-lib/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

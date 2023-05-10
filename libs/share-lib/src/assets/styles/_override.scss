@@ -1,0 +1,59 @@
+/* OVERRIDE PRIMENG DROPDOWN */
+p-dropdown {
+  .p-dropdown {
+    width: 100%;
+  }
+}
+
+/* OVERRIDE PRIMENG INPUT */
+.p-float-label {
+  .p-inputtext {
+    width: 100%;
+  }
+
+  &.error input {
+    border-color: #e24c4c;
+  }
+
+  &.error label {
+    color: #e24c4c;
+  }
+}
+
+.p-inputwrapper {
+  width: 100%;
+}
+
+/* OVERRIDE PRIMENG BUTTON */
+p-button {
+  .p-button-label {
+    font-weight: 400 !important;
+  }
+
+  &.btn-lg button {
+    min-width: 180px;
+  }
+
+  &.primary button {
+    background-color: var(--color-g-100);
+    border-color: var(--color-g-100);
+  }
+
+  &.primary button:hover {
+    background-color: var(--color-g-dark) !important;
+    border-color: var(--color-g-dark) !important;
+  }
+}
+
+button.p-button.primary {
+  background-color: var(--color-g-100);
+  border-color: var(--color-g-100);
+}
+
+/* SET PROGRESS SPINNER CLASSES */
+.p-progress-spinner {
+  &.sm-loader {
+    width: 25px;
+    height: 25px;
+  }
+}

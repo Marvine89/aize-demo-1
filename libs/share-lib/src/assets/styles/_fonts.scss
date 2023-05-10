@@ -1,0 +1,52 @@
+/* FONT SIZES */
+.font-size {
+  &--xxs {
+    font-size: var(--space-xxs);
+  }
+  &--xs {
+    font-size: var(--space-xs);
+  }
+  &--sm {
+    font-size: var(--space-sm);
+  }
+  &--one {
+    font-size: var(--space-unit);
+  }
+  &--md {
+    font-size: var(--space-md);
+  }
+  &--lg {
+    font-size: var(--space-lg);
+  }
+  &--xl {
+    font-size: var(--space-xl);
+  }
+  &--xxl {
+    font-size: var(--space-xxl);
+  }
+}
+
+/* FONT WEIGHT */
+.font-weight {
+  &--100 {
+    font-weight: 100;
+  }
+  &--200 {
+    font-weight: 200;
+  }
+  &--400 {
+    font-weight: 400;
+  }
+  &--500 {
+    font-weight: 500;
+  }
+  &--600 {
+    font-weight: 600;
+  }
+  &--900 {
+    font-weight: 900;
+  }
+  &--bold {
+    font-weight: bold;
+  }
+}

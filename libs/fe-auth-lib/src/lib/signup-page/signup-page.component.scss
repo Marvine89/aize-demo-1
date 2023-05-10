@@ -1,0 +1,24 @@
+@import 'media-query';
+
+.signup-form {
+  fe-auth-username-input,
+  &__input {
+    width: 100%;
+
+    @include tablet {
+      width: 80%;
+    }
+
+    @include sm-desktop {
+      width: 60%;
+    }
+  }
+
+  &__error-text {
+    width: 100%;
+    position: absolute;
+    font-size: var(--space-sm);
+    margin-top: var(--space-xxs);
+    color: var(--color-error);
+  }
+}

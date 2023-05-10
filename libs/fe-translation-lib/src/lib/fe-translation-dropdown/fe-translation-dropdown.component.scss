@@ -1,0 +1,10 @@
+:host {
+  width: 100%;
+
+  .fe-translation-dropdown {
+    p-dropdown {
+      display: block;
+      min-width: 190px;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import 'media-query';
+
+.chat-side-block {
+  &__user-info {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: var(--space-unit);
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--surface-300);
+    background-color: var(--surface-0);
+  }
+
+  &__user-info.active {
+    background-color: var(--gray-200);
+  }
+
+  &__username {
+    display: none;
+    text-align: left;
+    margin-left: var(--space-unit);
+    font-size: var(--space-md);
+    flex: 1;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__badge {
+    font-size: var(--space-lg);
+  }
+
+  &__typing-text {
+    overflow: hidden;
+    animation: shrink 0.5s linear;
+    padding-left: var(--space-md);
+    width: fit-content;
+  }
+
+  @keyframes shrink {
+    0% {
+      width: 0px;
+    }
+    25% {
+      width: 10px;
+    }
+    50% {
+      width: 30px;
+    }
+    100% {
+      width: 78px;
+    }
+  }
+}

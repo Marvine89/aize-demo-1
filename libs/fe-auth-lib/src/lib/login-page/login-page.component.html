@@ -1,0 +1,38 @@
+<fe-auth-wrapper-page>
+  <form class="login-form" (submit)="submitForm($event)">
+    <p class="margin-bottom--one font-size--md uppercase text-align--center">
+      {{ 'LOGIN' | translate }}
+    </p>
+
+    <div class="flex__justify-center flex__wrap">
+      <fe-auth-username-input type="login" [username]="username()"></fe-auth-username-input>
+
+      <div class="login-form__input p-float-label">
+        <p-password [formControl]="password()" [feedback]="false" [toggleMask]="true"></p-password>
+        <label for="float-input">{{ 'PASSWORD' | translate }}</label>
+
+        <p class="login-form__error-text" *rxIf="hasError$ as hasError">
+          {{ hasError | translate }}
+        </p>
+      </div>
+    </div>
+
+    <div class="margin-top--lg text-align--center">
+      <p-button
+        type="submit"
+        test-id="submit-button"
+        class="btn-lg primary"
+        styleClass="p-button-raised"
+        [label]="'SUBMIT' | translate"
+        [loading]="!!(apiLoading$ | push)"
+        [disabled]="
+          !!(loginEvents$ | push) || this.username().invalid || this.password().invalid || hasInvalidUserName()
+        "
+      ></p-button>
+
+      <div class="width-100 margin-top--lg">
+        <a class="link font-size--one" routerLink="/signup"> {{ 'REGISTER' | translate }}</a>
+      </div>
+    </div>
+  </form>
+</fe-auth-wrapper-page>

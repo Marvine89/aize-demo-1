@@ -1,0 +1,60 @@
+.text-message-block {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  margin: var(--space-xl) 0;
+
+  &.my-chat {
+    justify-content: flex-end;
+  }
+
+  &__bubble {
+    position: relative;
+    width: 300px;
+    border-radius: 40px;
+    padding: 24px;
+    background: var(--blue-600);
+  }
+
+  &__bubble:before {
+    content: '';
+    width: 0px;
+    height: 0px;
+    left: 32px;
+    bottom: -24px;
+    position: absolute;
+    border-left: 24px solid var(--blue-600);
+    border-right: 12px solid transparent;
+    border-top: 12px solid var(--blue-600);
+    border-bottom: 20px solid transparent;
+  }
+
+  &__bubble.right-bubble:before {
+    right: 25px;
+    left: auto;
+    transform: rotateY(180deg);
+  }
+
+  &__text {
+    color: var(--surface-f);
+  }
+
+  &__state-block {
+    position: absolute;
+    right: 28px;
+    bottom: 8px;
+    display: flex;
+    align-items: center;
+
+    span,
+    i {
+      color: var(--surface-300);
+      font-size: 12px;
+    }
+
+    i.pi-check-circle {
+      color: var(--color-g-100);
+    }
+  }
+}

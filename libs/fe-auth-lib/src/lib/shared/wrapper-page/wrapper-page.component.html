@@ -1,0 +1,15 @@
+<section class="page-container width-100 height-100 wrapper-page">
+  <div class="wrapper-page__language-btn">
+    <fe-translation-dropdown></fe-translation-dropdown>
+  </div>
+
+  <div class="wrapper-page__form-container flex__center">
+    <div class="wrapper-page__control-card">
+      <p class="margin-bottom--one font-size--md uppercase text-align--center">
+        {{ 'WELCOME_TITLE' | translate }}
+      </p>
+
+      <ng-content></ng-content>
+    </div>
+  </div>
+</section>

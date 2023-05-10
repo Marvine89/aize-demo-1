@@ -1,0 +1,16 @@
+{
+  "TITLE": "Dating Chatbot",
+  "WELCOME_TITLE": "Velkommen til datingboten",
+  "USERNAME": "Brukernavn",
+  "SUBMIT": "Sende inn",
+  "SEND": "Sende",
+  "API_ERROR": "Det har oppstått en feil.",
+  "INVALID_USERNAME": "Ugyldig brukernavn.",
+  "INVALID_USERNAME_PASSWORD": "Ugyldig brukernavn eller passord",
+  "LOGIN": "Logg inn",
+  "REGISTER": "Registrere",
+  "PASSWORD": "Passord",
+  "CONFIRM_PASSWORD": "Bekreft passord",
+  "CLICK_USER_START_CHAT": "Klikk på brukeren for å begynne å chatte.",
+  "TYPING": "Skriving"
+}

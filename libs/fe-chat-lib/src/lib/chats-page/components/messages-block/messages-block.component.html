@@ -1,0 +1,28 @@
+<section class="messages-block block">
+  <div class="messages-block__user-chat" *ngIf="selectedUser()">
+    <div class="messages-block__top-bar">
+      <p-avatar [image]="selectedUser()!.img!" styleClass="mr-2" shape="circle"></p-avatar>
+      <p class="font-size--one margin-left--sm">{{ selectedUser()!.username }}</p>
+    </div>
+    <div class="messages-block__chats">
+      <fe-chat-message [chats]="chats()"></fe-chat-message>
+    </div>
+    <div class="messages-block__form-block">
+      <textarea rows="5" cols="30" class="messages-block__textarea" [formControl]="textMessage" #textInput></textarea>
+      <p-button
+        type="submit"
+        styleClass="p-button-raised height-100"
+        class="messages-block__button"
+        [label]="'SEND' | translate"
+        [disabled]="!textMessage.value?.trim()"
+        (click)="sendMessage()"
+      ></p-button>
+    </div>
+  </div>
+
+  <!-- <ng-container *ngIf="!selectedUser()">
+    <div class="flex__center height-100">
+      <p class="font-size--md margin-bottom--xxl">{{ 'CLICK_USER_START_CHAT' | translate }}</p>
+    </div>
+  </ng-container> -->
+</section>
